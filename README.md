@@ -460,29 +460,3 @@ Fixed 500-token chunks cut text at arbitrary points — mid-sentence, mid-argume
 Document processing takes 10-60 seconds depending on size and whether OCR runs. If we did this synchronously in the upload route, the user would stare at a spinner for a minute. Celery lets the upload route return in under a second with a doc_id, while the worker processes in the background. The frontend polls every 3 seconds to update the status badge from pending → processing → ready.
 
 ---
-
-## What you can talk about in interviews
-
-This project covers enough technical depth for a 30-minute technical interview. Some questions you should be able to answer after building it:
-
-- Why cosine similarity for vector search? What does it actually measure?
-- What is RRF and why does it work better than averaging scores?
-- What's the difference between a bi-encoder and a cross-encoder? When do you use each?
-- How does BM25 score a document? What are TF and IDF?
-- What is semantic chunking and why does it matter for retrieval quality?
-- How does LangGraph differ from a simple function call chain?
-- How would you scale this to 10 million documents?
-- How do you prevent the LLM from hallucinating?
-- What metrics would you monitor in production?
-- How do you handle documents that are 1000+ pages?
-
----
-
-## Contributing
-
-1. Fork the repo
-2. Create a branch: `git checkout -b feature/your-feature`
-3. Make your changes with tests
-4. Open a pull request
-
----
